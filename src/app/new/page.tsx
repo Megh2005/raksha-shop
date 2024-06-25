@@ -19,7 +19,7 @@ export default function NewAdPage() {
             </button>
           </div>
         </div>
-        <div className="mt-6 bg-purple-200 text-center p-4 rounded-md">
+        <div className="mt-6 bg-purple-200 text-center p-4 rounded-md justify-center">
           <label className="text-purple-800" htmlFor="">
             Manufacturing Place
           </label>
