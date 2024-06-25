@@ -20,7 +20,10 @@ export default function Header({ session }: { session: Session | null }) {
         Raksha Marketplace
       </Link>
       <nav className="gap-4 *:border *:rounded-lg *:font-bold *:px-2 *:py-1 *:bg-transperent *:text-purple-600 flex">
-        <Link href="/new" className="hover:bg-purple-800 border-4 flex align-middle justify-center items-center gap-1 hover:text-white border-purple-600 duration-500 ease-in-out">
+        <Link
+          href="/new"
+          className="hover:bg-purple-800 border-4 flex align-middle justify-center items-center gap-1 hover:text-white border-purple-600 duration-500 ease-in-out"
+        >
           <IoMdAddCircle className="text-xl" />
           Add Product
         </Link>
@@ -41,6 +44,13 @@ export default function Header({ session }: { session: Session | null }) {
         )}
         {session?.user && (
           <>
+            <button
+              onClick={() => signOut()}
+              className="hover:bg-purple-800 border-4 flex align-middle justify-center items-center gap-1 hover:text-white border-purple-600 duration-500 ease-in-out"
+            >
+              <BiSolidLogOutCircle className="text-2xl" />
+              Sign Out
+            </button>
             <Link href={"/account"}>
               <Image
                 src={session.user.image as string}

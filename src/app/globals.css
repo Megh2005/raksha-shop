@@ -2,25 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-input[type="text"], input[type="number"], select, textarea{
-    @apply w-full border p-2 rounded font-medium text-blue-800;
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+  @apply w-full border-2 p-2 rounded font-bold outline-purple-500 border-purple-300 text-purple-700 focus:border-purple-700 focus-within:outline-purple-700;
 }
-label{
-    @apply text-lg text-purple-600 font-bold capitalize block mt-4 mb-1;
+label {
+  @apply text-lg text-purple-600 font-bold capitalize block mt-4 mb-1;
 }
-label.upload-btn input[type="file"]{
-    @apply hidden;
+label.upload-btn input[type="file"] {
+  @apply hidden;
 }
 
-label.radio-btn{
-    @apply has-[:checked]:bg-purple-400 rounded-md py-1 px-1 flex items-center gap-2 my-0;
+label.radio-btn {
+  @apply has-[:checked]:bg-purple-400 rounded-md py-1 px-1 flex items-center gap-2 my-0;
 }
-label.radio-btn span.icon{
-    @apply size-8 rounded-full flex items-center justify-center text-purple-500;
+label.radio-btn span.icon {
+  @apply size-8 rounded-full flex items-center justify-center text-purple-500;
 }
-label.radio-btn svg{
-    @apply h-4;
+label.radio-btn svg {
+  @apply h-4;
 }
-label.radio-btn{
-    @apply normal-case;
+label.radio-btn {
+  @apply normal-case;
 }
